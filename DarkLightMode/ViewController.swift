@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     
     @IBAction private func switchMode(_ sender: UISegmentedControl){
         let index = sender.selectedSegmentIndex
-        UserInterfaceStyle.changeStyle(style: UserInterfaceStyleType.setIndex(index: index))
+        UserInterfaceStyle.changeStyle(style: .setIndex(index: index))
     }
     
 }
