@@ -61,12 +61,12 @@ final class UserInterfaceStyle {
 }
 
 extension UserDefaults{
-    //MARK: Save User Data
+    //MARK: Save User prefered interface style
     func setUserInterfaceStyle(value: String){
         set(value, forKey: "UserInterfaceStyleType")
     }
     
-    //MARK: Retrieve User Data
+    //MARK: Retrieve User prefered interface style
     func getUserInterfaceStyle() -> UserInterfaceStyleType{
         let style = UserDefaults.standard.value(forKey: "UserInterfaceStyleType") as? String ?? ""
         switch style {
@@ -80,6 +80,7 @@ extension UserDefaults{
         }
     }
     
+     //MARK: remove User prefered interface style
     func removeUserInterfaceStyle(){
         self.removeObject(forKey: "UserInterfaceStyleType")
     }
